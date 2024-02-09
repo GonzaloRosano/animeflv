@@ -1,0 +1,36 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import "@fontsource-variable/quicksand";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Primer portfolio para demostrar mis conocimientos y llegar a las personas, este proyecto demuestra los conocimientos de ciertas tecnologias que he adquirido a lo largo de mi aprendizaje como desarrollador"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html{
+		background: -webkit-linear-gradient(145deg, #1f003b,#6f0387);/* Chrome 10-25, Safari 5.1-6 */        
+		background: linear-gradient(145deg, #1f003b,#6f0387);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                             
+		height: 100%;
+	}
+	
+	
+</style>
